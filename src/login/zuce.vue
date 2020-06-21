@@ -1,8 +1,8 @@
 <template>
 	<div id="zuce">
-		<div style="padding-top: 100px;">
+		<div style="padding-top: 100px; text-align: center;">
 			<div>
-					 <h2 style="background: white;color: #49c998;">单词本</h2>
+					 <h2 style="background: white;color: #49c998;padding: 40px;">单词本</h2>
 					 <h5 style="color: white;">用户注册</h5>
 			</div>
 			  </div>

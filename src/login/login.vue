@@ -1,6 +1,6 @@
 <template>
 	<div id="login">
-		<div style="padding-top: 100px;">
+		<div style="padding-top: 100px; text-align: center;">
 			<div>
 				<h2 style="background: white;color: #49c998;padding: 40px;">单词本</h2>
 				<h5 style="color: white;">English Word Book</h5>
@@ -37,7 +37,7 @@
 		},
 		methods: {
 			phonelogin() {
-				this.$router.push("/zuce")
+				this.$router.push("/phonelogin")
 			},
 			zuce() {
 				this.$router.push("/zuce")
@@ -45,21 +45,11 @@
 			dr() {
 				if (this.username != null && this.username != '') {
 					if (this.userpassword != null && this.userpassword != '') {
-					
-					var that = this;
-					this.$http.post("/api/login",{username:this.username,password:this.userpassword}).then(function(result){
-						
-						if(result.stateCode==200){
-							//保存当前登陆用户的信息
-							//sessionStorage:可以在当前浏览器范围内保存信息，当浏览器关闭后数据清空
-							//localStorage: 与cookie类似可以保存得更久
-							sessionStorage.setItem("loginuser",result.data.name)
-							that.$router.push("/words")
-						}else{
-							console.log("登陆失败！");
-						}
-						
+					axios.post("/api/login",{name:this.username,word:this.userpassword}).then(function(result){
+						console.log(result);
+						/* that.$router.push("/words") */
 					});
+			
 						
 						
 						}else {

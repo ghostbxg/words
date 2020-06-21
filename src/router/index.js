@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import login from './../login/login.vue'
+import phonelogin from './../login/phonelogin.vue'
 import VueRouter from 'vue-router'
 import zuce from './../login/zuce.vue'
 Vue.use(VueRouter)
@@ -13,6 +14,8 @@ var router = new VueRouter({
 		},
 		{
 			path:"/zuce",component:zuce
+		},{
+			path:"/phonelogin",component:phonelogin
 		}
 	]
 });
