@@ -47,7 +47,7 @@
 					if (this.userpassword != null && this.userpassword != '') {
 					
 					var that = this;
-					this.$http.post("/api/login",{username:this.username,password:this.password}).then(function(result){
+					this.$http.post("/api/login",{username:this.username,password:this.userpassword}).then(function(result){
 						
 						if(result.stateCode==200){
 							//保存当前登陆用户的信息
