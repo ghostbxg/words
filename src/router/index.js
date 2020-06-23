@@ -14,9 +14,9 @@ var router = new VueRouter({
 	mode:"history",
 	routes:[
 		{path:"/",redirect:"/login"},
-		{path:"/words",component:words},
+		{path:"/words",name:'单词本',component:words},
 		{
-			path:"/login",component:login
+			path:"/login",name:"登录",component:login
 		},
 		{
 			path:"/updateword",component:updateword
